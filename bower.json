@@ -1,0 +1,19 @@
+{
+  "name": "brapp",
+  "main": "index.js",
+  "version": "0.0.0",
+  "authors": [
+    "Tommy Kristoffersen"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ember": "~1.9.1"
+  }
+}
