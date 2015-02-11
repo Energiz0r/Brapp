@@ -29,6 +29,10 @@
     "url": "https://github.com/heroku/node-js-getting-started/issues"
   },
   "homepage": "https://github.com/heroku/node-js-getting-started",
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.4.3",
+    "gulp-ember-templates": "^0.6.0"
+  },
   "author": "Tommy Kristoffersen"
 }

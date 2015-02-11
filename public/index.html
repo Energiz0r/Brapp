@@ -5,55 +5,6 @@
     <title></title>
 </head>
 <body>
-    <script type="text/x-handlebars" data-template-name="application">
-        {{#link-to 'brews'}}
-            Brews
-        {{/link-to}}
-
-        {{#link-to 'newBrews'}}
-            New brew!
-        {{/link-to}}
-
-        </br>
-        </br>
-
-        Welcome to brapp, stay tuned for a great brewlogging app for ambitious brewers!
-        </br>
-        </br>
-
-        {{outlet}}
-    </script>
-
-    <script type="text/x-handlebars" data-template-name="index">
-    </script>
-
-    <script type="text/x-handlebars" data-template-name="brews">
-        </br>
-        BREWS:
-        <ul>
-            {{#each brew in model}}
-            <li>
-                <label>{{brew.name}}</label>
-
-            </li>
-            {{/each}}
-        </ul>
-    </script>
-
-    <script type="text/x-handlebars" data-template-name="newBrews">
-        Create a new brew!
-        </br>
-        name: {{textarea value=name}}
-        </br>
-
-        ingredients: {{textarea value=ingredients}}
-        </br>
-        <div {{action "saveBrew" this}}>SAVE</div>
-    </script>
-
-
-
-
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/handlebars.js"></script>
     <script type="text/javascript" src="js/ember.js"></script>
@@ -62,5 +13,6 @@
     <script type="text/javascript" src="app/routes/brews.js"></script>
     <script type="text/javascript" src="app/routes/brewsNew.js"></script>
     <script type="text/javascript" src="app/models/brew.js"></script>
+    <script type="text/javascript" src="app/ember-templates.js"></script>
 </body>
 </html>

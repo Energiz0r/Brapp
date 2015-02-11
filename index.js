@@ -30,7 +30,6 @@ var Brew = mongoose.model('Brew', BrewSchema);
 app.set('port', (process.env.PORT || 5000));
 app.set('view engine', 'jade');
 app.use(express.static(__dirname + '/public'));
-//app.use(passport.initialize());
 app.use(bodyParser.json());
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
