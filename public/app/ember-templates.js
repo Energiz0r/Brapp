@@ -16,7 +16,7 @@ Ember.TEMPLATES["application"] = Ember.Handlebars.template({"1":function(depth0,
 },"useData":true});
 Ember.TEMPLATES["brews"] = Ember.Handlebars.template({"1":function(depth0,helpers,partials,data) {
   var stack1, buffer = '';
-  data.buffer.push("        HAI MAT\r\n        <li>\r\n            <label>");
+  data.buffer.push("        <li>\r\n            <label>");
   stack1 = helpers._triageMustache.call(depth0, "brew.name", {"name":"_triageMustache","hash":{},"hashTypes":{},"hashContexts":{},"types":["ID"],"contexts":[depth0],"data":data});
   if (stack1 != null) { data.buffer.push(stack1); }
   data.buffer.push("</label>\r\n\r\n        </li>\r\n");

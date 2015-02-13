@@ -1,9 +1,8 @@
 var express = require('express'),
     app = express(),
-    passport = require('passport'),
     bodyParser  = require('body-parser'),
-    mongoose = require('mongoose');
-
+    mongoose = require('mongoose'),
+    router = require('./routes/index.js');
 
 //db connection
 var uristring =
@@ -18,13 +17,6 @@ mongoose.connect(uristring, function (err, res) {
         console.log ('Succeeded connected to: ' + uristring);
     }
 });
-//models
-var BrewSchema = mongoose.Schema({
-   name: String
-});
-
-var Brew = mongoose.model('Brew', BrewSchema);
-
 
 //node server config
 app.set('port', (process.env.PORT || 5000));
@@ -37,28 +29,9 @@ app.use(function(req, res, next) {
     next();
 });
 
-///Routing
-app.get('/brew', function(request, response) {
-    Brew.find(function(err, brews){
-        if(err) response.send('error getting brews');
-        response.send(brews);
-    });
-});
-
-app.post('/brew', function(request, response) {
-    console.log(request.body.name);
-    console.log(request.body);
-    console.log(request.headers);
-    var brew = new Brew({name: request.body.name});
-
-    brew.save(function(err, brew){
-        if(err) {
-            response.send('error saving ' + brew.name);
-        }
-        response.send(brew);
-    });
-});
-
+app.use(app.router);
+// Routes
+app.get('/', routes.index);
 
 //start server
 app.listen(app.get('port'), function() {
